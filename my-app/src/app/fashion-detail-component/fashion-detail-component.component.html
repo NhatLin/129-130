@@ -1,0 +1,16 @@
+<div class="fashion-detail">
+    <h2>Fashion Detail</h2>
+    
+    <!-- Search Input and Button -->
+    <label for="fashionId">Fashion ID:</label>
+    <input type="text" id="fashionId" [(ngModel)]="fashionId" placeholder="Enter Fashion ID" />
+    <button (click)="fetchFashion()">Search</button>
+  
+    <!-- Display Fashion Details -->
+    <div *ngIf="fashion">
+      <p><strong>Fashion Id:</strong> {{ fashion._id }}</p>
+      <p><strong>Fashion Subject:</strong> {{ fashion.fashion_subject }}</p>
+      <p><strong>Fashion Detail:</strong> {{ fashion.fashion_detail }}</p>
+      <img *ngIf="fashion.fashion_image" [src]="fashion.fashion_image" alt="Fashion Image" class="fashion-image" />
+    </div>
+</div>

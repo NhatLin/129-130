@@ -1,0 +1,43 @@
+<p>fashion-new works!</p>
+<p>{{ errMessage }}</p>
+<table>
+    <tr>
+        <td>Fashion Style:</td>
+        <td>
+            <input type="text" class="form-control" name="style" id="style" placeholder="Nhập Style"
+                [(ngModel)]="fashion.style" />
+        </td>
+    </tr>
+    <tr>
+        <td>Fashion Subject:</td>
+        <td>
+            <input type="text" class="form-control" name="fashion_subject" id="fashion_subject"
+                placeholder="Nhập Subject" [(ngModel)]="fashion.fashion_subject" />
+        </td>
+    </tr>
+    <tr>
+        <td>Fashion Detail:</td>
+        <td>
+            <input type="text" class="form-control" name="fashion_detail" id="fashion_detail"
+                placeholder="Nhập Detail" [(ngModel)]="fashion.fashion_detail" />
+        </td>
+    </tr>
+    <tr>
+        <td>Fashion Image:</td>
+        <td>
+            <div class="custom-file">
+                <input type="file" class="file-input" name="fashion_image" id="fashion_image"
+                    (change)="onFileSelected($event)" #fileInput style="display: none;" />
+                    <button type="button" class="btn btn-primary" (click)="openFileSelector()">Choose File</button>
+                    <label class="custom-file-label" (click)="openFileSelector()">
+                    {{ selectedFileName || 'No file chosen' }}
+                </label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="postFashion()">Submit</button>
+        </td>
+    </tr>
+</table>

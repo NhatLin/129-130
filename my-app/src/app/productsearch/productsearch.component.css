@@ -1,0 +1,16 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Chiều cao đầy đủ của khung hình */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+.search-container input {
+    margin: 5px; /* Khoảng cách giữa các input */
+}
+
+.search-container button {
+    margin: 10px; /* Khoảng cách giữa button và các input */
+}

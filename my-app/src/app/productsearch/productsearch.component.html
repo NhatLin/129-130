@@ -1,0 +1,28 @@
+<div class="search-container">
+    <label>Giá min: </label>
+    <input type="number" [(ngModel)]="minPrice" />
+    <label>Giá max: </label>
+    <input type="number" [(ngModel)]="maxPrice" />
+    <button (click)="searchProduct()">Tìm sản phẩm</button>
+    <p>Kết quả tìm kiếm</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Giá Sản phẩm</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.ProductId}}</td>
+                <td>{{product.ProductName}}</td>
+                <td>{{product.UnitPrice}}</td>
+                <td>
+                    <img src="{{product.Image}}" width="100" height="100"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
